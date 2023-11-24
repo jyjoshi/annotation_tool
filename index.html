@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video Annotation Tool</title>
+    <style>
+      #frame {
+        width: 640px;
+        height: 360px;
+        border: 1px solid black;
+      }
+      #toggle-play-pause:after {
+        content: "▶"; /* Unicode character for play triangle */
+        padding: 5px;
+      }
+
+      #toggle-play-pause.playing:after {
+        content: "⏸"; /* Unicode character for pause symbol */
+      }
+    </style>
+  </head>
+  <body>
+    <form id="upload-form">
+      <input type="file" id="video-input" name="video" accept="video/*" />
+      <button type="submit">Upload Video</button>
+    </form>
+
+    <div>
+      <button id="first-frame">First Frame</button>
+      <button id="prev-frame">Previous Frame</button>
+      <button id="toggle-play-pause">Play</button>
+      <button id="next-frame">Next Frame</button>
+      <button id="last-frame">Last Frame</button>
+    </div>
+    <img id="frame" src="" />
+
+    <script src="script.js"></script>
+  </body>
+</html>
